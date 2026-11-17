@@ -1,3 +1,4 @@
+import 'package:car_rental_app_design/Themes/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -5,6 +6,7 @@ class CustomTextField extends StatefulWidget {
   final TextInputType keyboardType;
   final TextEditingController controller;
   final String assetsIcon;
+  final String hintText;
   final bool isPassword;
 
   const CustomTextField({
@@ -13,6 +15,7 @@ class CustomTextField extends StatefulWidget {
     required this.controller,
     required this.assetsIcon,
     this.isPassword = false,
+    required this.hintText,
   });
 
   @override
@@ -28,6 +31,11 @@ class _CustomTextFieldState extends State<CustomTextField> {
       controller: widget.controller,
       keyboardType: widget.keyboardType,
       decoration: InputDecoration(
+        hintText: widget.hintText,hintStyle: TextStyle(
+        fontWeight: FontWeight.w500,
+        fontSize: 15,
+        color: AppColor.midnightInk,
+      ),
         fillColor: Colors.white,
         filled: true,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),

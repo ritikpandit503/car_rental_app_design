@@ -57,6 +57,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   keyboardType: TextInputType.text,
                   controller: userName,
                   assetsIcon: "assets/icons/user.svg",
+                  hintText: "Kaushal Oza",
                 ),
                 Spacing.h8,
                 Align(
@@ -75,6 +76,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   keyboardType: TextInputType.emailAddress,
                   controller: userEmail,
                   assetsIcon: "assets/icons/mail.svg",
+                  hintText: "kaushal@drivo.app",
                 ),
                 Spacing.h8,
                 Align(
@@ -93,6 +95,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   keyboardType: TextInputType.phone,
                   controller: userNumber,
                   assetsIcon: "assets/icons/phone.svg",
+                  hintText: "+44 7700 900123",
                 ),
                 Spacing.h8,
                 Align(
@@ -112,6 +115,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   controller: userPassword,
                   assetsIcon: "assets/icons/lock.svg",
                   isPassword: true,
+                  hintText: "Create a strong password",
                 ),
                 Spacing.h10,
                 Row(

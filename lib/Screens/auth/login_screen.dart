@@ -57,6 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         controller: userEmail,
                         assetsIcon: "assets/icons/mail.svg",
                         isPassword: false,
+                        hintText: "Kaushal@drivo.com",
                       ),
                       Spacing.h10,
                       Align(
@@ -75,6 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         controller: userPassword,
                         assetsIcon: "assets/icons/lock.svg",
                         isPassword: true,
+                        hintText: "Enter Password",
                       ),
                       Spacing.h8,
                       Row(
