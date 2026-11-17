@@ -1,4 +1,5 @@
 import 'package:car_rental_app_design/Themes/app_color.dart';
+import 'package:car_rental_app_design/Widgets/app_padding.dart';
 import 'package:car_rental_app_design/Widgets/custom_button.dart';
 import 'package:car_rental_app_design/Widgets/custom_text_field.dart';
 import 'package:car_rental_app_design/Widgets/spacing.dart';
@@ -17,13 +18,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController userPassword = TextEditingController();
   final TextEditingController userNumber = TextEditingController();
   bool isAgree = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
+          padding: AppPadding.screenPadding,
           child: SafeArea(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -142,17 +144,25 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 CustomButton(text: "Create Account"),
                 Spacing.h30,
                 Row(
-                 mainAxisAlignment: MainAxisAlignment.center,
-                  children: [Text("Already have an account?",style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600
-                  ),),
-                  TextButton(onPressed: () {
-
-                  }, child: Text("Log in",style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14,
-                  ),))
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Already have an account?",
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Log in",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ],

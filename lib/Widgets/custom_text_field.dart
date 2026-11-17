@@ -31,17 +31,18 @@ class _CustomTextFieldState extends State<CustomTextField> {
       controller: widget.controller,
       keyboardType: widget.keyboardType,
       decoration: InputDecoration(
-        hintText: widget.hintText,hintStyle: TextStyle(
-        fontWeight: FontWeight.w500,
-        fontSize: 15,
-        color: AppColor.midnightInk,
-      ),
+        hintText: widget.hintText,
+        hintStyle: TextStyle(
+          fontWeight: FontWeight.w500,
+          fontSize: 15,
+          color: AppColor.midnightInk,
+        ),
         fillColor: Colors.white,
         filled: true,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
         enabledBorder: OutlineInputBorder(
-           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.grey.shade300,width: 1),
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: Colors.grey.shade300, width: 1),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),

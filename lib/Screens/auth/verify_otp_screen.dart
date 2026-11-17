@@ -1,4 +1,5 @@
 import 'package:car_rental_app_design/Themes/app_color.dart';
+import 'package:car_rental_app_design/Widgets/app_padding.dart';
 import 'package:car_rental_app_design/Widgets/custom_button.dart';
 import 'package:car_rental_app_design/Widgets/spacing.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
+          padding: AppPadding.screenPadding,
           child: Center(
             child: Column(
               children: [

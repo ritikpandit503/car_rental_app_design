@@ -10,15 +10,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //home: const LoginScreen(),
-     // home: const SignUpScreen(),
-      home: const VerifyOtpScreen(),
+      home: const LoginScreen(),
 
+      // home: const SignUpScreen(),
+      //home: const VerifyOtpScreen(),
     );
   }
 }
