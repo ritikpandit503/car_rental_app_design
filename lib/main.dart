@@ -1,3 +1,4 @@
+import 'package:car_rental_app_design/Screens/auth/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      home: const LoginScreen(),
 
     );
   }
