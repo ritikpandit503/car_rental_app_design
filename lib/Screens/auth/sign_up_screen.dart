@@ -1,8 +1,10 @@
 import 'package:car_rental_app_design/Themes/app_color.dart';
-import 'package:car_rental_app_design/Widgets/app_padding.dart';
-import 'package:car_rental_app_design/Widgets/custom_button.dart';
-import 'package:car_rental_app_design/Widgets/custom_text_field.dart';
-import 'package:car_rental_app_design/Widgets/spacing.dart';
+import 'package:car_rental_app_design/Themes/app_font_weight.dart';
+import 'package:car_rental_app_design/Themes/app_padding.dart';
+import 'package:car_rental_app_design/Widgets/app_button.dart';
+import 'package:car_rental_app_design/Widgets/app_text_button.dart';
+import 'package:car_rental_app_design/Widgets/app_text_field.dart';
+import 'package:car_rental_app_design/Themes/app_spacing.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -38,81 +40,39 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   "Join Drivo and start renting in minutes.",
                   style: TextStyle(
                     fontSize: 15,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: AppFontWeight.regular,
                     color: AppColor.slate,
                   ),
                 ),
                 Spacing.h10,
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "FULL NAME",
-                    style: TextStyle(
-                      fontSize: 11,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.slate,
-                    ),
-                  ),
-                ),
-                Spacing.h8,
-                CustomTextField(
+                AppTextField(
+                  labelText: "FULL NAME",
                   keyboardType: TextInputType.text,
                   controller: userName,
                   assetsIcon: "assets/icons/user.svg",
                   hintText: "Kaushal Oza",
                 ),
                 Spacing.h8,
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "EMAIL ADDRESS",
-                    style: TextStyle(
-                      color: AppColor.slate,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 11,
-                    ),
-                  ),
-                ),
-                Spacing.h8,
-                CustomTextField(
+                AppTextField(
+                  labelText: "EMAIL ADDRESS",
                   keyboardType: TextInputType.emailAddress,
                   controller: userEmail,
                   assetsIcon: "assets/icons/mail.svg",
                   hintText: "kaushal@drivo.app",
                 ),
                 Spacing.h8,
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "PHONE NUMBER",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 11,
-                      color: AppColor.slate,
-                    ),
-                  ),
-                ),
-                Spacing.h8,
-                CustomTextField(
+
+                AppTextField(
+                  labelText: "PHONE NUMBER",
                   keyboardType: TextInputType.phone,
                   controller: userNumber,
                   assetsIcon: "assets/icons/phone.svg",
                   hintText: "+44 7700 900123",
                 ),
                 Spacing.h8,
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "PASSWORD",
-                    style: TextStyle(
-                      fontSize: 11,
-                      fontWeight: FontWeight.w600,
-                      color: AppColor.slate,
-                    ),
-                  ),
-                ),
-                Spacing.h8,
-                CustomTextField(
+
+                AppTextField(
+                  labelText: "PASSWORD",
                   keyboardType: TextInputType.text,
                   controller: userPassword,
                   assetsIcon: "assets/icons/lock.svg",
@@ -141,7 +101,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ],
                 ),
                 Spacing.h10,
-                CustomButton(text: "Create Account"),
+                AppButton(text: "Create Account"),
                 Spacing.h30,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -153,16 +113,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Log in",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                        ),
-                      ),
-                    ),
+                     AppTextButton(text: "Log in")
                   ],
                 ),
               ],

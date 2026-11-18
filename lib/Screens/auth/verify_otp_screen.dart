@@ -1,7 +1,7 @@
 import 'package:car_rental_app_design/Themes/app_color.dart';
-import 'package:car_rental_app_design/Widgets/app_padding.dart';
-import 'package:car_rental_app_design/Widgets/custom_button.dart';
-import 'package:car_rental_app_design/Widgets/spacing.dart';
+import 'package:car_rental_app_design/Themes/app_padding.dart';
+import 'package:car_rental_app_design/Widgets/app_button.dart';
+import 'package:car_rental_app_design/Themes/app_spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -60,7 +60,7 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
                   ),
                 ),
                 Spacer(),
-                CustomButton(text: "Verify & Continue"),
+                AppButton(text: "Verify & Continue"),
               ],
             ),
           ),
